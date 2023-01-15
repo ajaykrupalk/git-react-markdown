@@ -12,13 +12,7 @@ function App(props) {
         <MonacoEditor
             onChange={setMarkdown}
             language="markdown"
-            value="# This is title 
-            ## This is subtitle
-            ```py
-            def function():
-                print('Hello World')
-            ```
-            "
+            value="# This is title"
             options={{
                 theme: 'vs-dark',
             }}
