@@ -6,12 +6,15 @@ export default function App() {
   const [input, setInput] = useState('');
   const [srcDoc, setSrcDoc] = useState('')
 
+  // This is to set the output only after 250ms
+  // To avoid your browser re-rendering regularly
   useEffect(() => {
     const timeout = setTimeout(() => {
       setSrcDoc(input)
   }, 250)
 
-    return () => clearTimeout(timeout)
+    // clear timeout if there are changes made before 250ms
+    return () => clearTimeout(timeout) 
   }, [input])
 
   return (

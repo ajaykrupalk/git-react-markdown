@@ -9,6 +9,9 @@ function App(props) {
     }
 
     return (
+        // Using pre-built component MonacoEditor
+        // When there is a change setMarkdown is called
+        // Default value is given
         <MonacoEditor
             onChange={setMarkdown}
             language="markdown"
